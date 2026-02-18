@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авиарейсы</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      height: 100vh;
+      background: 
+        url('assets/images/П.jpg') no-repeat center center;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    .back-btn:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-btn">← Назад на главную</a>
+</body>
+<header class="header">
+  <div class="header__container">
+    <div class="logo">Авиарейсы</div>
+
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Главная</a>
+      <a href="page2.html" class="nav__link">Мобильная версия</a>
+      <a href="page3.html" class="nav__link">Связаться</a>
+      <a href="#how" class="nav__link">Как это работает</a>
+    </nav>
+    <div class="header__right">
+      <a href="#why" class="btn btn--dark">Подробнее</a>
+      <button class="btn btn--dark">О сервисе</button>
+    </div>
+  </div>
+</header>
+<main>
+
+  <section class="contacts">
+    <div class="contacts__overlay"></div>
+    <div class="contacts__content">
+    </div>
+  </section>
+
+</main>

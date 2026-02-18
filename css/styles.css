@@ -1,0 +1,365 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f5f8fb;
+  color:#0d1b2a;
+}
+
+.header-right {
+    display: flex; 
+    gap: 10px;
+}
+
+.header{
+  background:rgba(255,255,255,0.7); 
+  backdrop-filter: blur(10px);
+  position:fixed;
+  width:100%;
+  z-index:999;
+}
+
+.header__container{
+  max-width:1200px;
+  margin: auto;
+  padding:15px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:700;
+}
+
+.nav {
+    display: flex;
+    gap: 15px; 
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.nav__link{
+  text-decoration:none;
+  color:#000;
+  font-size:14px;
+}
+
+.burger{
+  display:none;
+}
+
+.btn{
+  border:none;
+  padding:10px 20px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.header__container .btn--dark {
+    margin-left: 10px;
+}
+.btn.btn--dark {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 30px !important;
+    border: none !important;
+    background: #0d1b2a !important;
+    color: white !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    text-align: center !important;
+    line-height: normal !important;
+    height: auto !important;
+}
+
+.btn--light{
+  background:white;
+  color:black;
+}
+
+.btn--outline{
+  background:transparent;
+  border:1px solid #ccc;
+}
+
+.hero{
+  height: 100vh;
+  background:
+    url("../assets/images/F.jpg") no-repeat center center;
+  background-size: cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:80px;
+}
+
+.hero__subtitle{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.section{
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.section--light{
+  background:white;
+  border-radius:30px;
+  padding:60px 20px;
+}
+
+.section__title{
+  font-size:36px;
+  margin-bottom:30px;
+  
+}
+
+.card-img {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%; 
+    aspect-ratio: 3/4; 
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Кнопка */
+.card-img-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Чтобы 4 картинки в ряд */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:20px;
+}
+
+.big-card{
+  grid-row:span 2;
+  background:#dde7f3;
+  border-radius:25px;
+  height:300px;
+}
+.big-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-card {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    height: 140px;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    text-align: left;
+    font-weight: bold;
+    color: #292C46 !important;
+    font-weight: 700; 
+    text-shadow: none;
+    position: relative;
+}
+
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; 
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.3));
+    border-radius: 20px 20px 0 0;
+    z-index: 1;
+}
+
+.info-card {
+    position: relative;
+    z-index: 2; 
+}
+
+.stats{
+  display:flex;
+  gap:40px;
+  font-size:32px;
+  margin:20px 0;
+}
+
+.stats span{
+  display:block;
+  font-size:14px;
+  color:#666;
+}
+
+.form{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.form input{
+  padding:12px 20px;
+  border-radius:30px;
+  border:1px solid #ccc;
+  width:250px;
+}
+
+.faq{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.faq__item {
+  background: white;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.faq__question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.faq__toggle {
+  background: none;
+  border: 2px solid #0d1b2a;
+  color: #0d1b2a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.faq__toggle:hover {
+  background: #0d1b2a;
+  color: white;
+}
+
+.faq__answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-top: 1px solid #eee;
+}
+
+.faq__answer p {
+  padding: 15px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 200px; 
+}
+
+.faq__item.active .faq__toggle {
+  transform: rotate(45deg);
+  background: #0d1b2a;
+  color: white;
+}
+
+.footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#888;
+}
+
+/* MOBILE */
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr 1fr;}
+  .grid{grid-template-columns:1fr;}
+  .burger{display:block;}
+  .nav{display:none;}
+}
+
+.simple-page{
+  max-width:900px;
+  margin:120px auto 60px;
+  padding:0 20px;
+}
+
+.contacts{
+  height: 100vh;
+  background:
+    url("../assets/images/3стр.jpg") no-repeat center center;
+  background-size: cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+}
+
+.contacts h1{
+  font-size:80px;
+}
+
+.contacts__subtitle{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+
+.info-card:nth-child(2) { background-image: url('../assets/images/Стрелка.jpg'); }
+.info-card:nth-child(3) { background-image: url('../assets/images/М.jpg'); }
+.info-card:nth-child(4) { background-image: url('../assets/images/Мозг.jpg'); }
+.info-card:nth-child(5) { background-image: url('../assets/images/Настр.jpg'); }
